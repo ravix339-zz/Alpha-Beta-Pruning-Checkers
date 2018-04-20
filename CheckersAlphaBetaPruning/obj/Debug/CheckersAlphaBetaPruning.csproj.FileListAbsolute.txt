@@ -1,0 +1,11 @@
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\bin\Debug\CheckersAlphaBetaPruning.exe.config
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\bin\Debug\CheckersAlphaBetaPruning.exe
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\bin\Debug\CheckersAlphaBetaPruning.pdb
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\obj\Debug\CheckersAlphaBetaPruning.csprojResolveAssemblyReference.cache
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\obj\Debug\CheckersAlphaBetaPruning.Properties.Resources.resources
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\obj\Debug\CheckersAlphaBetaPruning.csproj.GenerateResource.Cache
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\obj\Debug\CheckersAlphaBetaPruning.csproj.CoreCompileInputs.cache
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\obj\Debug\CheckersAlphaBetaPruning.exe
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\obj\Debug\CheckersAlphaBetaPruning.pdb
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\obj\Debug\CheckersAlphaBetaPruning.CheckerBoard.resources
+C:\Users\Ravi Sinha\source\repos\CheckersAlphaBetaPruning\CheckersAlphaBetaPruning\obj\Debug\CheckersAlphaBetaPruning.MainMenu.resources
