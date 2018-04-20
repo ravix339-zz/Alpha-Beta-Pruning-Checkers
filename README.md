@@ -18,7 +18,7 @@ Unlike in real checkers, if a piece reaches the end of the board, it does not be
 The winner is determined when a player's opponent has no more pieces remaining. However, in the case where both players have pieces remaining and there are no more possible moves for either player, the player with more pieces is the winner. However, if there are an equal amount of pieces for both players at the end of the game, the game results in a tie.
 
 ### Implementation Requirements
-For this program, the computer player must use Alpha-Beta Pruning to determine the best move in a certain situation. For this specific implementation, the utility of the computer winning is -1, human player winning is 1 and a neutral game is 0. The computer player acts as the minimum player in the algorithm. 
+For this program, the computer player must use [Alpha-Beta Pruning](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning) to determine the best move in a certain situation. For this specific implementation, the utility of the computer winning is -1, human player winning is 1 and a neutral game is 0. The computer player acts as the minimum player in the algorithm. 
 
 The program must output the number of nodes generated, maximum depth of search tree reached, number of times the Max_Value function pruned, and number of times the Min_Value function pruned. In this implementation, the values are all displayed on a table below the gameboard. 
 
