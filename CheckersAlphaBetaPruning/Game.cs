@@ -33,8 +33,8 @@ namespace CheckersAlphaBetaPruning
         private const int AI = -1;
 
         //Recursion Depth for Alpha-Beta Pruning
-        private const int RECURSION_DEPTH_FIRST = 20; //Depth if Player is first
-        private const int RECURSION_DEPTH_SECOND = 19; //Depth is Player is second
+        private const int RECURSION_DEPTH_FIRST = 19; //Depth if Player is first
+        private const int RECURSION_DEPTH_SECOND = 18; //Depth is Player is second
 
         
         private bool playersTurn;
@@ -52,7 +52,7 @@ namespace CheckersAlphaBetaPruning
         }
 
         //Constructor for a game.
-        public Game(List<Button> buttons, bool playFirst, Label label, DataGridView table)
+        public Game(List<Button> buttons, bool playFirst, Label label, DataGridView table, int levelNumber)
         {
             //Initialize Variables
             AI_Status = label;
@@ -60,7 +60,7 @@ namespace CheckersAlphaBetaPruning
             CoordinateButtonMap = new Map<Tuple<int, int>, Button>();
             board = new List<List<GamePiece>>();
             move = new List<Tuple<int, int>>(2);
-            ComputerPlayer = new AlphaBetaPruning(playFirst ? RECURSION_DEPTH_FIRST : RECURSION_DEPTH_SECOND); //set Recursion depth depending on if player is first.
+            ComputerPlayer = new AlphaBetaPruning((playFirst ? RECURSION_DEPTH_FIRST : RECURSION_DEPTH_SECOND)/(4-levelNumber)); //set Recursion depth depending on if player is first and the difficulty.
             move.Add(dummyCoordinate);
             move.Add(dummyCoordinate); //make entire move invalid.
             BoardSize = Convert.ToInt32(Math.Sqrt(buttons.Count)); //get Size of board

@@ -16,14 +16,14 @@ namespace CheckersAlphaBetaPruning
     {
         private Game game;
 
-        public CheckerBoard(bool playerOne)
+        public CheckerBoard(bool playerOne, int difficulty)
         {
             InitializeComponent();
             List<Button> allButtons = this.Controls.OfType<Button>().ToList(); //Get every button to pass to the game
             allButtons.Reverse(); //put the list in sorted order
             allButtons.Remove(button37); //remove button for StartGame
             allButtons.Remove(mainmenu); //remove button for MainMenu
-            game = new Game(allButtons, playerOne, label1, AI_StatsTable); //pass in everybutton for the game, the label, and the stats table
+            game = new Game(allButtons, playerOne, label1, AI_StatsTable, difficulty); //pass in everybutton for the game, the label, and the stats table
 
             //Set the event for clicking a button to the same function (ButtonPress)
             button1.Click  += ButtonPress;

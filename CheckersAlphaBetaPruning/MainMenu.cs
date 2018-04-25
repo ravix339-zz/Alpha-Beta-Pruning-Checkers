@@ -15,11 +15,13 @@ namespace CheckersAlphaBetaPruning
         public MainMenu()
         {
             InitializeComponent();
+            difficulty.DropDownStyle = ComboBoxStyle.DropDownList;
+            difficulty.SelectedIndex = difficulty.FindString("Hard");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var nextStep = new CheckerBoard(true);
+            var nextStep = new CheckerBoard(true, 3 - difficulty.SelectedIndex);
             this.Hide();
             nextStep.StartPosition = FormStartPosition.CenterParent;
             nextStep.ShowDialog();
@@ -28,7 +30,7 @@ namespace CheckersAlphaBetaPruning
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var nextStep = new CheckerBoard(false);
+            var nextStep = new CheckerBoard(false, 3 - difficulty.SelectedIndex);
             this.Hide();
             nextStep.StartPosition = FormStartPosition.CenterParent;
             nextStep.ShowDialog();

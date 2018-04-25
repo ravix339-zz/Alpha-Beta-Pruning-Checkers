@@ -172,20 +172,32 @@ namespace CheckersAlphaBetaPruning
             int boardSize = board.Count; //Size of board
             int AI_Squares = 0; //Number of AI pieces
             int PLAYER_Squares = 0; //Number of PLAYER pieces
+            int AI_moveScore = 0;
+            int PLAYER_moveScore = 0;
 
             //Count how many AI & PLAYER pieces are there
             for (int y = 0; y < boardSize; y++)
             {
                 for (int x = 0; x < boardSize; x++)
                 {
-                    if (board[y][x].Sentiment == AI) { AI_Squares++; }
-                    if (board[y][x].Sentiment == PLAYER) { PLAYER_Squares++; }
+                    if (board[y][x].Sentiment == AI) {
+                        AI_Squares++;
+                        AI_moveScore += boardSize-1-y;              //Give score depending on how far from an ending position a piece is (AI ends in the 0th row)
+                    }
+                    if (board[y][x].Sentiment == PLAYER) {
+                        PLAYER_Squares++;
+                        PLAYER_moveScore += y; //Give score depending on how far from an ending position a piece is (PLAYER ends in the 5th row)
+                    }
                 }
             }
+            //We gave more points for the further away from the destination a piece is since that attribute can show that more moves are available.
 
-            //return the victor is whoever has more squares or a tie
-            if (PLAYER_Squares > AI_Squares) { return PLAYER; }
-            if (AI_Squares > PLAYER_Squares) { return AI; }
+            //We wait the number of squares currently on the board more than the distance from the endpoint since it is more indicative of the victor.
+            int AI_Score = (5 * AI_moveScore + 10 * AI_Squares);
+            int PLAYER_Score = (5 * PLAYER_moveScore + 10 * PLAYER_Squares);
+
+            if(PLAYER_Score > AI_Score) { return PLAYER; }
+            else if(AI_Score > PLAYER_Score) { return AI; }
             else { return NEUTRAL; }
 
         }       
